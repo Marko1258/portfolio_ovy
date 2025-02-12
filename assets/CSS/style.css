@@ -1,0 +1,107 @@
+:root {
+    --dark-grayisch-black: #474448;
+    --page-color: #F5F5F5;
+    --white-color: #fff;
+    --text-color: #2D232E;
+    --button-color: #ff9f43;
+    --transparent-color: rgba(255, 255, 255, 0);
+}
+
+.gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    /* You can adjust this value to control gradient height */
+    background: linear-gradient(to bottom, var(--dark-grayisch-black), var(--white-color));
+    z-index: -1;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 -20px 20px -20px;
+    padding: 0 20px 14px 20px;
+    border-bottom: var(--dark-grayisch-black) 1px solid;
+}
+
+.email {
+    color: #333;
+    text-decoration: none;
+}
+
+.hero-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.bio {
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.contact-button {
+    display: inline-block;
+    background-color: var(--button-color);
+    color: var(--white-color);
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-bottom: 30px;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    color: #666;
+    font-size: 0.8em;
+}
+
+@media screen and (min-width: 375px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .hero-image {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+
+    .contact-button {
+        padding: 10px 20px;
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
