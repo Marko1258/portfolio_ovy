@@ -1,11 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/CSS/style.css">
+    <link rel="stylesheet" href="../assets/CSS/normalize.css">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <div class="container">
+        <header>
+            <div class="email">marko.papranec@gmail.com</div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li> <a href="./my_work.html">My work</a></li>
+                <li><a class="menu-contact" href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="hero">
+            <h1>Selected<span>works</span> </h1>
+            <p>Some of my works using adobe programs during education</p>
+        </div>
+        <div class="work-gallery">
+            <div class="work-item">
+                <img src="../assets/images/works/Marko_Papranec_zatišie kopie2.jpg" alt="Work 1">
+            </div>
+
+            <div class="work-item">
+                <img src="../assets/images/works/marko_papranec_reinterpretacia.jpg" alt="Work 2">
+            </div>
+
+            <div class="work-item">
+                <img src="../assets/images/works/kalendar_marko_P_2.jpg" alt="Work 3">
+            </div>
+
+            <div class="work-item">
+                <img src="../assets/images/works/rubics_cube_Marko.jpg" alt="Work 4">
+            </div>
+
+            <div class="work-item">
+                <img src="../assets/images/works/Marko_papranec_ziarovka.jpg" alt="Work 5">
+            </div>
+
+            <div class="work-item">
+                <img src="" alt="Work 6">
+            </div>
+
+            <div class="work-item">
+                <img src="" alt="Work 7">
+            </div>
+
+            <div class="work-item">
+                <img src="" alt="Work 8">
+            </div>
+
+
+            <footer>
+
+                <div class="social-icons">
+                    <a href="#" class="social-icon instagram"></a>
+                    <a href="#" class="social-icon github"></a>
+                    <a href="#" class="social-icon pinterest"></a>
+                </div>
+
+                <p>&copy; 2025 by Marko Papranec </p>
+            </footer>
+        </div>
+        <script>
+            const menuToggle = document.getElementById('mobile-menu');
+            const navMenu = document.querySelector('.nav-menu');
+
+            menuToggle.addEventListener('click', function () {
+                menuToggle.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            // Close menu when clicking on a nav link
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menuToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        </script>
 </body>
+
 </html>
