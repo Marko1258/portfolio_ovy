@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/CSS/normalize.css">
     <link rel="stylesheet" href="../assets/CSS/style.css">
-    <link rel="stylesheet" href="../assets/CSS/n">
-    <title>Document</title>
+    <title>My-work</title>
 </head>
 
 <body>
@@ -20,9 +20,9 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="./home.html">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="./about_me.html">About</a></li>
                 <li> <a href="./my_work.html">My work</a></li>
-                <li><a class="menu-contact" href="#">Contact</a></li>
+                <li><a class="menu-contact" href="./contact.html">Contact</a></li>
             </ul>
         </header>
         <div class="hero_2">
@@ -62,6 +62,10 @@
                 <img src="" alt="Work 8">
             </div>
         </div>
+        <div class="lightbox">
+            <button class="close-lightbox">&times;</button>
+            <img src="" alt="Lightbox image">
+        </div>
             <section class="project-section">
                 <div class="project-header">
                     <h3>My <span>projects</span></h3>
@@ -89,23 +93,8 @@
                 <p>&copy; 2025 by Marko Papranec </p>
             </footer>
         </div>
-        <script>
-            const menuToggle = document.getElementById('mobile-menu');
-            const navMenu = document.querySelector('.nav-menu');
-
-            menuToggle.addEventListener('click', function () {
-                menuToggle.classList.toggle('active');
-                navMenu.classList.toggle('active');
-            });
-
-            // Close menu when clicking on a nav link
-            document.querySelectorAll('.nav-menu a').forEach(link => {
-                link.addEventListener('click', () => {
-                    menuToggle.classList.remove('active');
-                    navMenu.classList.remove('active');
-                });
-            });
-        </script>
+        <script src="./script/nav.js"></script>
+        <script src="./script/lightbox.js"></script>
 </body>
 
 </html>

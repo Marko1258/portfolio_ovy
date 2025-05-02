@@ -3,7 +3,7 @@
 :root {
     --montique: #3a3153;
     --page-color: #fefdfd;
-    --grey-color: #b1aebb;
+    --grey-color: #dddddfc5;
     --light-color: #F8FAFC;
     --text-color: #333333;
     --purple-color: #5f43b2;
@@ -285,15 +285,15 @@ footer {
 .work-item:hover {
     scale: 1.05;
     cursor: pointer;
-    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
     border-radius: 8px;
-    background-color: var(--purple-color);
+    
 }
 .work-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
+    box-shadow: 6px 6px 0 0 var(--purple-color)
 }
 .project-section {
     display: flex;
@@ -354,6 +354,93 @@ footer {
     color: var(--periwinkle-color);
     margin-bottom: 10px;
     font-weight: 400;
+}
+/* Lightbox styles */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: var(--light-color);
+    font-size: 30px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 10px;
+}
+.contact_form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px ;
+    padding: 20px;
+    width: 90%;
+    background-color: var(--grey-color) ;
+    box-shadow:  -6px 6px 0 0 var(--purple-color);
+
+}
+.form_header {
+    font-size: 3.2rem;
+    text-align: center;
+    margin: 40px 0;
+}
+input {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: var(--text-color);
+    border-radius: 10px;
+    border: 1px solid var(--purple-color);
+    font-weight: 400;
+    width: 100%;
+    padding: 5px;
+}
+textarea {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: var(--text-color);
+    border-radius: 10px;
+    border: 1px solid var(--purple-color);
+    font-weight: 400;
+    width: 100%;
+    padding: 5px;
+}
+.contact_btn {
+    background-color: var(--purple-color);
+    color: var(--page-color);
+    padding: 10px 20px;
+    width: 100%;
+    margin: 0 auto;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.contact_btn:hover {
+    background-color: var(--montique);
 }
 @media screen and (max-width: 768px) {
     .menu-toggle {

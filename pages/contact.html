@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/CSS/normalize.css">
-    <link rel="stylesheet" href="../assets/CSS/style.css">   
-    <title>Home</title>
+    <link rel="stylesheet" href="../assets/CSS/style.css">
+    <title>Contact</title>
 </head>
-
 <body>
     <div class="container">
         <header>
@@ -25,21 +23,18 @@
                 <li><a class="menu-contact" href="./contact.html">Contact</a></li>
             </ul>
         </header>
+        <div class="contact_form">
+            <h1 class="form_header">Contact <span>me</span></h1>
+            <form action="https://formspree.io/f/xjvjlqzj" method="POST">
+                <input type="text" id="name" name="name" placeholder="Name..." required><br>
 
-        <div class="hero">
-            <h1>HELLO THERE!<br>MY NAME IS <span>MARKO</span> </h1>
-        </div>
+                <input type="email" id="email" name="email" placeholder="Email..." required><br>
 
-        <div class="profile">
-            <img src="../assets/images/Predmet.png" alt="Profile Photo" class="profile-img">
+                <textarea id="message" name="message" placeholder="Massage..." rows="6" required></textarea><br>
 
+                <button class="contact_btn" type="submit">Submit</button>
+            </form>
 
-            <div class="bio">
-                I'm a graphic designer with a passion for visual creation and digital art. Currently studying at a
-                vocational school specializing in graphic design and developing my creative skills.
-            </div>
-
-            <a href="./contact.html" class="cta-button">Contact Me</a>
         </div>
         <footer>
             
@@ -51,8 +46,8 @@
             
             <p>&copy; 2025 by Marko Papranec </p>
         </footer>
+
     </div>
     <script src="./script/nav.js"></script>
 </body>
-
 </html>
