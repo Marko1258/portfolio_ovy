@@ -37,10 +37,10 @@ body {
 
 
 .container {
-    max-width: 765px;
+    max-width: 100%;
     margin: 0 auto;
     background-color: var(--page-color);
-    min-height: 100vh;
+    height: 100vh;
 
 }
 
@@ -363,8 +363,6 @@ footer {
     padding: 15px;
     font-size: 12px;
     color: var(--light-color);
-    position: relative;
-    bottom: 0;
     width: 100%;
 }
 
@@ -602,4 +600,102 @@ textarea {
     .menu-toggle.active .bar:nth-child(3) {
         transform: translateY(-9px) rotate(-45deg);
     }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        width: 100%;
+    }
+    header {
+        font-size: rem;
+        padding: 10px 10px;
+        height: 60px;
+    }
+    .nav-menu {
+       gap: 24px;
+    }
+    .email {
+        font-size: 16px;
+    }
+    .menu-contact {
+        padding: 6px 20px;
+    
+    }
+    .hero h1 {
+        font-size: 5rem;
+        margin: 0;
+    }
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;;
+    }
+    li {
+        align-items: center;
+    }
+    .profile {
+        margin: 0 100px;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 160px;
+    }
+    .profile-img {
+       width: 500px;
+       height: 500px;
+        max-width: none;
+        max-height: none;
+    }
+    .content_and_btn {
+        border-radius: 20px;
+        padding: 40px;
+        
+    }
+    .hero_2 h1 {
+        font-size: 10rem;
+        margin-top: 40px;
+    }
+    .hero_2 p {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    .project-header h3 {
+        font-size: 4.8rem;
+    }
+      .project-header p {
+        font-size: 1.2rem;
+      }
+      .project-item h4 {
+        font-size: 2.4rem;
+      }
+      .project-item p {
+        font-size: 1.2rem;
+      }
+      .vo-vyskach {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+      }
+      .digitaliko {
+        font-size: 1.2rem;
+      }
+    .work-gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+        padding: 32px 20px;
+    }
+
+    .project-section {
+        padding: 40px;
+    }
+    .project-item {
+        width: 800px;
+        margin: 0 auto;
+    }
+    .contact_form {
+        width: 60%;
+        margin: 20px auto;
+        padding: 40px;
+    }
+
 }
